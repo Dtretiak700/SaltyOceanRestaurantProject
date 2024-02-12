@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salty Ocean Restaurant</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- MAIN PAGE -->
+    <header class="main-page-container">
+        <div class="image-container">
+            <img class="image-main-page reveal-from-left gs_reveal" src="main ocean.jpg" alt="Ocean" width="500px">
+        </div>
+
+        <div class="main-title-container">
+            <nav class="menu">
+                <a class="link" href="#about-us-section">About us</a>
+                <a class="link" href="#menu-section">Menu</a>
+                <a class="link" href="#contact-us-section">Contact us</a>
+                <button type="button" class="btn border-0 link link-split" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Split Your Bill
+                </button>
+            </nav>
+            <!-- Bootstrap Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg d-flex justify-content-center">
+            <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Use our app and split your bill for all guests</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-for-split-image">
+                    <form>
+                        <p>Your bill</p>
+                        <span>
+                            <input type="text" id="bill">
+                        </span>
+                        <p>Number of people</p>
+                        <span>
+                            <input type="text" id="people">
+                        </span>
+                        <p>Did you like our service?</p>
+                        <button id="addTip">Add a tip</button>
+                        <select id="tip">
+                            <option disabled>Select an option</option>
+                            <option value="0.30">Wow! 30%</option>
+                            <option value="0.20">Good service! 20%</option>
+                            <option value="0.10">It was OK! 10%</option>
+                            <option value="0.00" selected>No tip!</option>
+                        </select>
+                        <button id="btn">Calculate</button>
+                    </form>
+        
+                    <div id="finalTotalAmount">
+                        <div id="billAmount">
+                            <p class="head-par">Bill</p>
+                            <span>$</span>
+                            <span id="billPerPerson"></span>
+                            <span>per person</span>
+                        </div>
+        
+                        <div id="tipAmount">
+                            <p class="head-par">Tip</p>
+                            <span>$</span>
+                            <span id="tipPerPerson"></span>
+                            <span>per person</span>
+                        </div>
+        
+                        <div id="totalAmount">
+                            <p class="head-par">Total</p>
+                            <span>$</span>
+                            <span id="billAndTip"></span>
+                            <span>per person</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light border border-light" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="logo-container gs_reveal">
+                <img class="main-logo" src="Logo.svg" alt="Logo" width="200px">
+                <h1 class="header">Salty Ocean</h1>
+                <p class="under-title-text">Premium Quality Restaurant</p>
+            </div>
+            <br>
+            <img class="image-for-mobile reveal-from-left gs_reveal" src="main ocean for mobile.jpg" alt="Ocean" width="700px">
+        </div>
+    </header>
+    <br>
+    <!-- ABOUT US -->
+    <main class="main-container">
+        <section id="about-us-section">
+            <div class="about-us-container">
+                <div class="text-container">
+                    <img class="image-logo" src="Logo.svg" alt="Logo" width="120px">
+                    <p class="about-us-text gs_reveal">Salty Ocean is an ideal place for those who appreciate the<br>
+                        freshness  and quality of seafood and fish.<br>
+                        The restaurant offers a wide variety of dishes prepared with the<br>
+                        freshest  ingredients purchased from local fishermen.<br>
+                        The team of experienced chefs prepares each dish with love and<br>
+                        professionalism to satisfy the most demanding gourmets.<br>
+                        The owners strive to create a cozy atmosphere where guests can<br>
+                        enjoy  excellent food and excellent service.</p>
+                </div>
+                <img class="image-for-mobile reveal-from-right gs_reveal" src="restaurant for mobile.jpg" alt="Restaurant" width="700px">
+                <img class="image-about-us reveal-from-right gs_reveal" src="restaurant-corridor-with-small-two-people-tables.jpg" alt="Restaurant" width="500px">
+            </div>
+        </section>
+        <br>
+        <!-- MENU -->
+        <section id="menu-section">
+            <div class="menu-container">
+                <div class="menu-image-container">
+                    <img class="image-menu reveal-from-left gs_reveal" src="flat-lay-delicious-shells-spices.jpg" alt="Menu" width="500px">
+                    <img class="logo-on-image" src="Logo.svg" alt="Logo" width="120px">
+                </div>
+
+                <div class="menu-image">
+                    <h4 class="gs_reveal">Our menu</h4>
+                    <img class="menu-rest" src="5217867.jpg" alt="Menu" width="600px">
+                </div>
+            </div>
+        </section>
+        <br>
+    </main>
+        <!-- CONTACT US -->
+        <footer class="footer-container">
+            <section id="contact-us-section">
+                <img class="image-logo" src="Logo.svg" alt="Logo" width="120px">
+                <div class="contact-us-main-group">
+                    <div class="contact-us-container">
+                        <img class="cards-contact-us" src="Cards.png" alt="Cards" width="600px">
+                        <button class="btn-call"><a class="btn-call-link" href="tel:+381611778076">Call us</a></button>
+                        <p class="contact-text">OPEN EVERY DAY 08AM - 11PM | MAIN BOULEVARD 7292 NEW YORK</p>
+                    </div>
+                    <img class="fish-image reveal-from-right gs_reveal" src="fish-with-tomatoes-lemons.jpg" alt="Fish" width="500px">    
+                </div>
+            </section>
+            <hr>
+            <p class="text-designed">ALL INFORMATION AND IMAGES ON THIS WEBSITE ARE USED FOR EDUCATIONAL PURPOSES</p>
+        </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <!-- Scroll Animation JS -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
